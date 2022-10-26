@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-opportunity-form',
@@ -7,11 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpportunityFormComponent implements OnInit {
 
-  constructor() { /* TODO document why this constructor is empty */  }
+  form = this.formBuilder.group({
+    title: [''],
+    description: ['']
+  });
+
+  constructor(
+    private formBuilder: NonNullableFormBuilder,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
     // TODO document why this method 'ngOnInit' is empty
 
   }
 
+  onRegister() {
+    //TODO cadastro opp
+  }
+
+  onCancel(): void {
+    this.location.back();
+  }
 }

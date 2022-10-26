@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { TextFieldModule } from '@angular/cdk/text-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -29,7 +30,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatSelectModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatGridListModule
+    MatGridListModule,
+    TextFieldModule
   ]
 })
 export class AppMaterialModule { }

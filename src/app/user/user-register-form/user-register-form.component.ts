@@ -34,7 +34,7 @@ export class UserRegisterFormComponent implements OnInit {
     // TODO cadastrar usuário
   }
 
-  onCancel() {
+  onCancel(): void {
     this.location.back();
   }
 
