@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-user-login-form',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginFormComponent implements OnInit {
 
-  constructor() { }
+  form = this.formBuilder.group({
+    userName: [''],
+    password: ['']
+  })
+
+  constructor(
+    private formBuilder: NonNullableFormBuilder,
+    private service: UserService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onLogin() {
+    //TODO verifica login
+  }
+
+  onRegister() {
+    this.router.navigate(['register'], { relativeTo: this.route });
+  }
 }
