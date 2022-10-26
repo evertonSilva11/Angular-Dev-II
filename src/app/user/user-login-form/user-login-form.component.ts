@@ -23,10 +23,12 @@ export class UserLoginFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+
   }
 
   onLogin() {
-    //TODO verifica login
+    //TODO verificar login
   }
 
   onRegister() {

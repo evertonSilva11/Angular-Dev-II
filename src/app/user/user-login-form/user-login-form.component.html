@@ -4,6 +4,7 @@
       <mat-card-header>
         <mat-card-title>Título</mat-card-title>
       </mat-card-header>
+
       <mat-card-content>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam atque, nobis eos doloremque obcaecati blanditiis
         a architecto nesciunt facilis ducimus minus? Nisi laudantium adipisci officia voluptatem mollitia voluptate,
@@ -11,11 +12,12 @@
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="2" class="form">
+  <mat-grid-tile [colspan]="2">
     <mat-card>
       <mat-card-header>
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
+
       <mat-card-content>
         <form [formGroup]="form" class="min-width">
           <mat-form-field class="full-width">
@@ -23,12 +25,14 @@
           </mat-form-field>
 
           <mat-form-field class="full-width">
-            <input matInput placeholder="Senha" formControlName="password">
+            <input type="password" matInput placeholder="Senha" formControlName="password">
           </mat-form-field>
         </form>
       </mat-card-content>
+
       <mat-card-actions>
         <button mat-raised-button color="primary" (click)="onLogin()">Logar</button>
+
         <button mat-raised-button (click)="onRegister()">Cadastrar-se</button>
       </mat-card-actions>
     </mat-card>

@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class OpportunityService {
 
-  constructor() { }
+  constructor() { /* TODO document why this constructor is empty */  }
 }

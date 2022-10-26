@@ -1,4 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-user-register-form',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserRegisterFormComponent implements OnInit {
 
-  constructor() { }
+  form = this.formBuilder.group({
+    name: [''],
+    lastName: [''],
+    password: [''],
+    confPassword: [''],
+    email: [''],
+    phone: ['']
+  });
+
+  constructor(
+    private formBuilder: NonNullableFormBuilder,
+    private location: Location,
+    private service: UserService
+  ) { }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+
+  }
+
+  onRegister() {
+    // TODO cadastrar usuário
+  }
+
+  onCancel() {
+    this.location.back();
   }
 
 }
